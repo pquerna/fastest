@@ -206,7 +206,7 @@ static void prepare_response(http_baton_t *r, const char *value)
       abort();
     }
 
-    len += 39; // xml + trailing new line
+    len += 39; /* xml + trailing new line */
 
     len = snprintf(&r->respbuf[0], MAX_RESP_LENGTH, value_respfmt, len, value);
 
@@ -224,7 +224,7 @@ static void after_read(uv_handle_t* handle, int nread, uv_buf_t buf) {
 
   if (nread < 0) {
     /* Error or EOF */
-    //uv_last_error().code == UV_EOF
+    /* uv_last_error().code == UV_EOF */
 
     if (buf.base) {
       free(buf.base);
@@ -284,7 +284,7 @@ static void on_close(uv_handle_t* handle, int status) {
       fprintf(stderr, "WARNING: Elapsed was %llums\n", elapsed_ms);
     }
   }
-  //uv_close(&server);
+  /*uv_close(&server); */
 #endif
 
     free(handle->data);

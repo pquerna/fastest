@@ -1,4 +1,4 @@
-CFLAGS=-O0 -g -I. -DEV_MULTIPLICITY=0 -Wall
+CFLAGS=-O0 -g -I. -DEV_MULTIPLICITY=0 -Wall -std=c89
 CC?=gcc
 
 fastest: fastest.o
